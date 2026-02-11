@@ -8,7 +8,7 @@
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-6Q7DtuR+VfxyAPmZyeE1juj8Qi2Tsyc17XtEqcGUITpEgfM0LDkTfSl1qXHqtZ0Su+aB4xoXfg6gW+da6wO7ag==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -59,16 +59,26 @@
         </div>
       </div>
     </div>
-  </section>
-
-  <!-- About Section -->
-  <section id="about" class="py-5">
-    <div class="container">
-      <h2 class="section-title text-center">About Me</h2>
-      <div class="row justify-content-center">
-        <div class="col-lg-10">
-          <p class="lead">I’m a computational chemist and machine learning researcher with more than six years of experience developing scalable ML frameworks and high‑performance simulation pipelines for molecular science. I specialize in Python, PyTorch and scientific computing and have a proven track record of deploying meta‑learning algorithms, cheminformatics tools and open‑source packages.</p>
-          <p class="lead">My work has resulted in successful cross‑disciplinary collaborations, significant funding awards and publications in top‑tier journals. I’m passionate about bridging chemistry and machine learning to solve complex problems and mentoring the next generation of scientists.</p>
+    <!-- About Panel -->
+    <div class="about-panel" id="about">
+      <h2 class="section-title text-center about-title">About Me</h2>
+      <p class="about-summary">Computational chemist and machine learning researcher with 6+ years of experience building scalable ML frameworks and simulation pipelines for molecular science. Specialized in Python, PyTorch, meta-learning, and cheminformatics, with a track record of cross-disciplinary collaborations, significant funding awards, and publications in top-tier journals.</p>
+      <div class="expertise-tiles">
+        <div class="expertise-tile">
+          <i class="fa-solid fa-atom"></i>
+          <h4>Chemistry and Materials</h4>
+        </div>
+        <div class="expertise-tile">
+          <i class="fa-solid fa-sliders"></i>
+          <h4>Molecular Dynamics</h4>
+        </div>
+        <div class="expertise-tile">
+          <i class="fa-solid fa-diagram-project"></i>
+          <h4>Graph Theory</h4>
+        </div>
+        <div class="expertise-tile">
+          <i class="fa-solid fa-comments"></i>
+          <h4>Meta Learning</h4>
         </div>
       </div>
     </div>
@@ -80,16 +90,17 @@
       <h2 class="section-title text-center">Technical Skills</h2>
       <div class="row">
         <div class="col-md-4 mb-4">
-          <h5 class="fw-bold">Programming &amp; ML</h5>
-          <p>Python (advanced), PyTorch, Scikit‑learn, XGBoost, Graph Neural Networks, Model‑Agnostic Meta‑Learning (MAML), Meta‑Learning</p>
+          <h5 class="fw-bold">Scientific Computing</h5>
+          <p>Python, NumPy, SciPy, Pandas, Matplotlib, Seaborn, ASE, RDKit, NetworkX, Dask</p>
         </div>
         <div class="col-md-4 mb-4">
-          <h5 class="fw-bold">Scientific Computing</h5>
-          <p>NumPy, SciPy, Pandas, Matplotlib, HOOMD‑blue, LAMMPS, Molecular Dynamics, Density Functional Theory (DFT)</p>
+          <h5 class="fw-bold"> ML &amp; AI</h5>
+          <p>PyTorch, Scikit-learn, XGBoost, GNN, Deep Learning, Reinforcement
+Learning, Active Learningeural Networks, Meta‑Learning (MAML, Reptile, custom) </p>
         </div>
         <div class="col-md-4 mb-4">
           <h5 class="fw-bold">Tools &amp; Infrastructure</h5>
-          <p>Git, CI/CD, SLURM, High‑Performance Computing (HPC), Linux/Unix, Jupyter, LaTeX, AWS basics, Open‑source development</p>
+          <p> Shell, Data Visualization, Git, Slurm, HPC, Linux, Jupyter, Notion, Obsidian, LaTeX, Markdown</p>
         </div>
       </div>
     </div>
@@ -104,11 +115,11 @@
         <h5 class="fw-bold">Postdoctoral Research Associate</h5>
         <span class="text-muted">Los Alamos National Laboratory &middot; May&nbsp;2024 – Present &middot; Los Alamos, NM</span>
         <ul class="mt-2">
-          <li>Developed a meta‑learning framework for molecular property prediction that outperforms conventional models on small data; methodology adopted across three LANL divisions (bio, environmental, seismology) and currently under review at <em>Nature Machine Intelligence</em>.</li>
-          <li>Built <strong>buhito</strong>, an open‑source Python package for graphlet analysis, implementing optimized DFS/BFS algorithms; secured $500K+ in funding as the sole postdoc on a multi‑PI computational chemistry project.</li>
-          <li>Contributed core cheminformatics functionality to the <em>minervachem</em> library for the SeparationML project, developing automated filtering pipelines and substructure visualisation tools for metal‑metal separation ligand design.</li>
-          <li>Mentored two graduate students from statistics and computer science backgrounds in 2025 with a 100% project acceptance rate at the Applied ML Summer School; expanding mentorship to three students in 2026.</li>
-          <li>Organised the Telluride Workshop on ML for Chemistry (40+ participants), managing invitations, scheduling and facilitating discussions; received outstanding feedback on the pre‑workshop survey methodology.</li>
+          <li><b>Developed LAMeL</b>, meta-learning framework for molecular prediction—outperforms on limited data; methodology used by LANL's bio, environmental & seismic teams.</li>
+          <li><b>Developed buhito</b>, open-source Python package for universal graphlet analysis; secured postdoc Co-I funding.</li>
+          <li><b>Contributed to<em>minervachem</em></b> Python libraryautomated pipelines and visualization tools accelerating metal separation ligand design.</li>
+          <li><b>Mentored</b> two graduate students from statistics and computer science backgrounds in 2025 with a 100% project acceptance rate at the Applied Machine Learning Summer School.</li>
+          <li><b>Organized Telluride Science Workshop</b> "Machine Learning and Informatics for Chemistry and Materials", 40+ participants, managing invitations, scheduling and facilitating discussions.</li>
         </ul>
       </div>
       <!-- PhD Student -->
@@ -116,10 +127,20 @@
         <h5 class="fw-bold">Graduate Research Assistant, PhD Student</h5>
         <span class="text-muted">University of Utah, Department of Chemistry &middot; May&nbsp;2020 – May&nbsp;2024 &middot; Salt Lake City, UT</span>
         <ul class="mt-2">
-          <li>Engineered a custom molecular dynamics simulation pipeline processing over 500K‑particle cocrystallisation systems on GPU‑accelerated HPC clusters using HOOMD‑blue, generating more than 10&nbsp;TB of data for machine‑learning analysis.</li>
-          <li>Published a first‑author paper in <em>JACS</em> demonstrating that thermodynamic stability is a poor predictor of cocrystal formation, challenging conventional pharmaceutical approaches.</li>
-          <li>Automated analysis workflows combining NumPy, Pandas and Freud to extract thermodynamic and kinetic parameters from terabyte‑scale simulation data, reducing analysis time by 70%.</li>
-          <li>Developed object‑oriented Python packages for molecular visualisation adopted by five lab members, reducing code duplication by 50%.</li>
+          <li><b>Built custom MD pipelines</b> for 500K+ particle cocrystallization simulations on GPU‑accelerated HPC clusters using HOOMD‑blue, generating more than 10&nbsp;TB of data.</li>
+          <li><b>Challenged cocrystallization paradigm</b> by demonstrating that thermodynamic stability is a poor predictor of cocrystal formation (in <em>JACS</em>).</li>
+          <li><b>Automated analysis workflows</b> combining NumPy, Pandas and Freud to extract thermodynamic and kinetic parameters from terabyte‑scale simulation data, reducing analysis time by ~70%.</li>
+        </ul>
+      </div>
+      <!-- Undergrad Student -->
+      <div class="mb-4 p-4 border rounded">
+        <h5 class="fw-bold">Undergraduate Research Assistant</h5>
+        <span class="text-muted"> Southern Federal University, Smart Materials Research Institute &middot; September&nbsp;2016 – June&nbsp;2019 &middot; Rostov‑on‑Don, Russia</span>
+        <ul class="mt-2">
+          <li><b>Synthesized 20+ MOF materials</b>, characterized via XRD, TEM, SEM, electrochemical analysis.</li>
+          <li><b>Analyzed MS & X-ray data</b> from ESRF synchrotron experiments on catalytic CO oxidation; contributed to 2 publications.</li>
+          <li><b>Developed nitrogen-doped carbon catalysts</b> from ZIF precursors, 40% improved ORR activity.</li>
+          <li><b>Presented</b> at 4 international conferences, won Best Poster Award at Faraday Discussion (London, 2018).</li>
         </ul>
       </div>
     </div>
@@ -150,19 +171,19 @@
   <section id="publications" class="py-5">
     <div class="container">
       <h2 class="section-title text-center">Selected Publications</h2>
-      <p class="text-center">Total publications: 11 (3 first‑author, 3 arXiv preprints) &middot; H‑index: 7 &middot; 150+ citations</p>
+      <p class="text-center">Total publications: 11 (4 first‑author) &middot; 130+ citations &middot; <a href="https://scholar.google.com/citations?user=e_uOeA4AAAAJ&hl=en&oi=ao" target="_blank" rel="noopener">Google Scholar</a></p>
       <ul class="list-group list-group-flush mt-4">
         <li class="list-group-item">
-          <strong>Meta‑Learning Linear Models for Molecular Property Prediction</strong><br>
-          <em>Pimonova, Y.</em> et&nbsp;al., arXiv:2509.13527, 2025.
+          <strong><a href="https://arxiv.org/abs/2509.13527" target="_blank" rel="noopener">Meta‑Learning Linear Models for Molecular Property Prediction</a></strong><br>
+          <em>Pimonova, Y.</em>, Taylor, M.G., Allen, A.E.A., Yang, P., Lubbers, N.E., arXiv:2509.13527, 2025. 
         </li>
         <li class="list-group-item">
-          <strong>Thermodynamic Stability Is a Poor Indicator of Cocrystallisation</strong><br>
-          <em>Pimonova, Y.</em>, Carpenter, J.E., Gruenwald, M., J. Am. Chem. Soc., 2024, 146(4), 2815–2824.
+          <strong><a href="https://pubs.acs.org/doi/abs/10.1021/jacs.3c13030" target="_blank" rel="noopener">Thermodynamic Stability Is a Poor Indicator of Cocrystallization in Models of Organic Molecules</a></strong><br>
+          <em>Pimonova, Y.</em>, Carpenter, J.E., Gruenwald, M., J. Am. Chem. Soc., 2024, 146(4), 2805–2815.
         </li>
         <li class="list-group-item">
-          <strong>Statistical Insight into Meta‑Learning via Predictor Subspace</strong><br>
-          Datta, S., <em>Pimonova, Y.</em> et&nbsp;al., arXiv:2509.18349, 2026.
+          <strong><a href="https://pubs.acs.org/doi/full/10.1021/acsomega.9b01534" target="_blank" rel="noopener">Iron-/Nitrogen-Doped Electrocatalytically Active Carbons for the Oxygen Reduction Reaction with Low Amounts of Cobalt</a></strong><br>
+          <em>Pimonova, Y.</em>, Budnyk, A., Yohannes, W., Bugaev, A., Lastovina, T., ACS Omega, 2019, 4(22), 19548-19555.
         </li>
       </ul>
     </div>
@@ -199,13 +220,21 @@
       <h2 class="section-title text-center">Contact</h2>
       <div class="row justify-content-center">
         <div class="col-md-8 text-center">
-          <p>If you'd like to discuss potential collaborations, opportunities or just want to say hello, feel free to reach out via email or connect on LinkedIn and GitHub.</p>
-          <ul class="list-unstyled fs-5 mt-4">
-            <li class="mb-3"><i class="fa-solid fa-envelope me-2 text-primary"></i><a href="mailto:pimonova.ya@gmail.com">pimonova.ya@gmail.com</a></li>
-            <li class="mb-3"><i class="fa-solid fa-phone me-2 text-primary"></i><a href="tel:+18018644916">(801) 864‑4916</a></li>
-            <li class="mb-3"><i class="fa-brands fa-linkedin me-2 text-primary"></i><a href="https://linkedin.com/in/ypimonova" target="_blank" rel="noopener">linkedin.com/in/ypimonova</a></li>
-            <li class="mb-3"><i class="fa-brands fa-github me-2 text-primary"></i><a href="https://github.com/yuliapimonova" target="_blank" rel="noopener">github.com/yuliapimonova</a></li>
-          </ul>
+          <p>If you want to discuss collaborations, opportunities or just say hi, feel free to reach out!</p>
+          <div class="contact-buttons mt-4">
+            <a href="mailto:pimonova.ya@gmail.com" class="btn btn-outline-primary contact-btn">
+              <i class="fa-solid fa-envelope"></i>
+              <span>Email</span>
+            </a>
+            <a href="https://linkedin.com/in/ypimonova" class="btn btn-outline-primary contact-btn" target="_blank" rel="noopener">
+              <i class="fa-brands fa-linkedin"></i>
+              <span>LinkedIn</span>
+            </a>
+            <a href="https://github.com/yuliapimonova" class="btn btn-outline-primary contact-btn" target="_blank" rel="noopener">
+              <i class="fa-brands fa-github"></i>
+              <span>GitHub</span>
+            </a>
+          </div>
         </div>
       </div>
     </div>

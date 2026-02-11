@@ -2,7 +2,7 @@
 body {
   font-family: 'Poppins', sans-serif;
   line-height: 1.6;
-  color: #333;
+  color: #333A56;
   scroll-behavior: smooth;
 }
 
@@ -11,13 +11,27 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 :root {
-  --bs-primary: #1ee921;      /* choose your new brand colour here */
-  --bs-primary-rgb: 233, 30, 99; /* optional: RGB values for transparent utilities */
+  --bs-primary: #52658F;
+  --bs-primary-rgb: 82, 101, 143;
+  --bs-light: #F7F5E6;
+  --bs-light-rgb: 247, 245, 230;
+}
+
+/* Primary button */
+.btn-primary {
+  background-color: #52658F !important;
+  border-color: #52658F !important;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: #52658F !important;
+  border-color: #52658F !important;
 }
 
 /* Navigation */
 #mainNav {
-  background-color: rgba(69, 30, 56, 0.8) !important;
+  background-color: rgba(51, 58, 86, 0.8) !important;
 }
 
 /* Hero section */
@@ -26,8 +40,12 @@ h1, h2, h3, h4, h5, h6 {
   min-height: 100vh;
   background: url('../img/background.png') no-repeat center center/cover;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding-top: 70px;
+  padding-bottom: 2.5rem;
+  gap: 2rem;
 }
 
 .hero::before {
@@ -59,7 +77,7 @@ h1, h2, h3, h4, h5, h6 {
   gap: 3rem;
 }
 
-/* Photo placeholder */
+/* Photo */
 .hero-photo-col {
   flex-shrink: 0;
 }
@@ -96,7 +114,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .hero-name {
-  color: #fdd90d;
+  color: #f5cd96;
 }
 
 .hero-typed {
@@ -125,6 +143,79 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 500;
 }
 
+/* About panel within hero */
+.about-panel {
+  position: relative;
+  z-index: 2;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 24px;
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.3);
+  padding: 2rem 3rem;
+  max-width: 860px;
+  width: 90%;
+  color: #fff;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  animation: fadeSlideUp 0.8s ease 0.2s both;
+}
+
+.about-title {
+  color: #fff;
+}
+
+.about-title::after {
+  background-color: #f5cd96;
+}
+
+.about-summary {
+  text-align: center;
+  opacity: 0.92;
+  max-width: 700px;
+  margin: 0 auto 1.5rem;
+  font-size: 0.95rem;
+}
+
+/* Expertise tiles */
+.expertise-tiles {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.expertise-tile {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 16px;
+  padding: 1.25rem 0.75rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.expertise-tile i {
+  font-size: 1.75rem;
+  margin-bottom: 0.5rem;
+  color: #f5cd96;
+  display: block;
+}
+
+.expertise-tile h6 {
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.expertise-tile p {
+  font-size: 0.75rem;
+  opacity: 0.8;
+  margin: 0;
+}
+
 /* Entrance animation */
 @keyframes fadeSlideUp {
   from {
@@ -150,13 +241,13 @@ h1, h2, h3, h4, h5, h6 {
   display: block;
   width: 60px;
   height: 3px;
-  background-color: #fdd90d;
+  background-color: #52658F;
   margin: 0.75rem auto 0;
 }
 
 /* Experience cards */
 #experience .border {
-  border-color: #e0e0e0 !important;
+  border-color: #E8E8E8 !important;
 }
 
 /* Awards & Leadership */
@@ -165,9 +256,34 @@ h1, h2, h3, h4, h5, h6 {
   padding-left: 1.5rem;
 }
 
+/* Contact buttons */
+.contact-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+.contact-btn {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1.25rem 1rem;
+  border-radius: 16px;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.contact-btn i {
+  font-size: 1.75rem;
+}
+
 /* Footer */
 .footer {
-  background: #452340;
+  background: #333A56;
   color: #fff;
   padding: 1.5rem 0;
 }
@@ -206,5 +322,11 @@ a:hover {
   }
   .section-title {
     font-size: 1.75rem;
+  }
+  .about-panel {
+    padding: 1.5rem;
+  }
+  .expertise-tile {
+    flex: 0 0 calc(50% - 0.5rem);
   }
 }
